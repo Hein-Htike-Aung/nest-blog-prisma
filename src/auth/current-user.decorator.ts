@@ -1,0 +1,13 @@
+import {
+  SetMetadata,
+  createParamDecorator,
+  ExecutionContext,
+} from '@nestjs/common';
+
+export const CurrentUser = createParamDecorator(
+  async (data: any, context: ExecutionContext) => {
+    const request = context.switchToHttp().getRequest();
+
+    return request.user;
+  },
+);

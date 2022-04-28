@@ -1,0 +1,51 @@
+### create User
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "xiaoting",
+    "email": "admin2@gmail.com",
+    "password": "admin"
+}
+
+
+### Login User
+POST http://localhost:3333/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+
+
+### Profile
+GET http://localhost:3333/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxZDY1MmEyZC1mZjg2LTQ1ODAtOWY1Yi05MTJmZDI0MjkxYTEiLCJlbWFpbCI6ImFkbWluMkBnbWFpbC5jb20iLCJpYXQiOjE2NDk0OTkxNTUsImV4cCI6MTY0OTUzNTE1NX0.E0RqDbWdPkH--VgAMlKNFBrhZPe05ABmxsRHZ95MBaA
+
+
+### find User By id
+GET http://localhost:3333/users/cbfb00cf-afeb-4de2-ab1d-f944f6995cc1
+
+
+### find All
+GET http://localhost:3333/users
+
+
+### update By id
+PATCH  http://localhost:3333/users/1d652a2d-ff86-4580-9f5b-912fd24291a1
+Content-Type: application/json
+
+{
+    "name": "xiaoxiao",
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+
+
+### Delete by id
+DELETE  http://localhost:3333/users/cbfb00cf-afeb-4de2-ab1d-f944f6995cc1
+
+
+### find All Users with posts
+GET http://localhost:3333/users?posts

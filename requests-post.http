@@ -1,0 +1,36 @@
+### Create Post 
+POST http://localhost:3333/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxZDY1MmEyZC1mZjg2LTQ1ODAtOWY1Yi05MTJmZDI0MjkxYTEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTY0OTQ5OTY1MywiZXhwIjoxNjQ5NTM1NjUzfQ.3vHAp8usaAYtxZ3stcD7Fn11VzZVOyhgux1NSIQrqCM
+
+{
+    "title": "Post Title1",
+    "body": "Post body1",
+    "categories": ["0f44a763-f261-41dc-918d-73e16d887a15", "92fe3344-1868-4243-923c-6c9b1b1f0eb0"]
+}
+
+### Update Post 
+PATCH  http://localhost:3333/posts/60a9f5fa-0ae9-413f-b475-f30bf78ffae1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxZDY1MmEyZC1mZjg2LTQ1ODAtOWY1Yi05MTJmZDI0MjkxYTEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTY0OTQ5OTY1MywiZXhwIjoxNjQ5NTM1NjUzfQ.3vHAp8usaAYtxZ3stcD7Fn11VzZVOyhgux1NSIQrqCM
+
+{
+    "title": "Post Title",
+    "body": "Post body",
+    "categories": ["0f44a763-f261-41dc-918d-73e16d887a15", "92fe3344-1868-4243-923c-6c9b1b1f0eb0", "a337e150-1def-453d-b499-c19603994e4c"]
+}
+
+### Get all Posts
+GET http://localhost:3333/posts
+
+
+### Get all Post with author & categories
+GET http://localhost:3333/posts?author&categories
+
+
+### Get all Post with author
+GET http://localhost:3333/posts?author
+
+
+### Get all Post With Categories
+GET http://localhost:3333/posts?categories

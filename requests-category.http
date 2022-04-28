@@ -1,0 +1,34 @@
+
+### Create Category
+POST http://localhost:3333/category
+Content-Type: application/json
+
+{
+    "name": "sport"
+}
+
+
+### Update Category
+PATCH  http://localhost:3333/category/0f44a763-f261-41dc-918d-73e16d887a15
+Content-Type: application/json
+
+{
+    "name": "js"
+}
+
+
+### Delete By id
+DELETE http://localhost:3333/category/9e417044-b311-48cf-9acd-8801b6c470e5
+
+
+### Find All Category
+GET http://localhost:3333/category
+
+
+### Find All Category With Posts
+GET http://localhost:3333/category?posts
+
+
+### Find By id
+GET http://localhost:3333/category/0f44a763-f261-41dc-918d-73e16d887a15
+
